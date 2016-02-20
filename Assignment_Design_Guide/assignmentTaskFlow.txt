@@ -1,0 +1,83 @@
+******************
+sql database guide:
+open the stocksticker.sql inside this very folder.
+run the script and create the tables in your local database.
+configure your config/database to connect to the respective database.
+(The git ignore has been configured to ignore the file so there should be no conflicts)
+******************
+
+******************
+Work assignment
+	Rupinder
+		main page controller + model 
+	Michael
+		stock page controller + model
+	Renan
+		player page controller + model
+	John
+		_template view + login page
+                Refer UI design to Comp4711A1.png
+******************
+
+******************
+Table attributes
+
+movement
+	datetime
+	code
+	action
+	amount
+
+player
+	player
+	cash
+
+stocks
+	code
+	name
+	category
+	value
+
+transactions
+	datetime
+	player
+	stock
+	trans
+	quantity
+******************
+
+******************
+Page information
+******************
+
+main page
+	stocks(values)
+		link to stock page
+	players(cash,equity)
+		link to player portfolio
+
+history page
+	transcation history for stocks
+	dropdown menu for stocks
+	purchases or sales brokered
+
+player portfolio page
+	recent trading activity
+	equity
+	cash
+	dropdown menu for players
+
+Log in page
+	what a typical log in page looks like
+******************
+
+models
+	main
+	history
+	player
+
+views
+	main
+	history
+	player
+	_template
