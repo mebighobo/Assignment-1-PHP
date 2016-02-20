@@ -6,7 +6,7 @@ class Homepage extends Application
     
 	public function index()
 	{
-            $players = $this->players->all();
+            $players = $this->players->all_with_equity();
             $stocks = $this->stocks->all();
         
             foreach($players as $player) 
@@ -25,7 +25,6 @@ class Homepage extends Application
 
             $rows = $this->table->make_columns($playerarr,1);
             $this->data['playertable'] = $this->table->generate($rows);
-
 
             $parm = array (
                 'table_open' => '<table class ="stocks">'

@@ -32,8 +32,30 @@ class Transactions extends CI_Model {
 
 		
 	}
-    
-    //return last 3 newest images
+        
+        public function get_stock_value($stock)
+        {
+            $stock_value = null;
+                    
+            $sql = "SELECT  s.Value "
+                    ."FROM stocks s "
+                    ."WHERE s.Code = '"
+                    .$stock
+                    ."'";
+            
+            $query = $this->db->query($sql)->result_array();
+            
+            if(!empty($query))
+            {
+                $stock_value = $query[0]['Value'];
+            }
+            
+            return $stock_value;
+        }
+        
+
+
+        //return last 3 newest images
    /* function newest()
     {
         $this->db->order_by("id", "desc");
